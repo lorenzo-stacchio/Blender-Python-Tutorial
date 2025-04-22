@@ -20,5 +20,23 @@ def download_obj():
         mimetype='text/plain'
     )
 
+
+@app.route('/download-texture')
+def download_texture():
+    # Path to the OBJ file
+    texture_path = os.path.join(app.root_path, 'images', 'minecraft.png')
+
+    # Check if the file exists
+    if not os.path.isfile(texture_path):
+        return "Texture file not found.", 404
+
+    # Serve the file for download
+    return send_file(
+        texture_path,
+        as_attachment=True,
+        download_name='texture.png',
+        mimetype='text/plain'
+    )
+    
 if __name__ == '__main__':
     app.run(debug=True)
