@@ -7,8 +7,9 @@ sep_len = 20
 print("-" * sep_len + "Render Image" + "-" * sep_len) ### ignore this, just for formatting prints
 
 ## SAVE IMAGE RENDER
-home_path = "C:/Users/Chiqu/Desktop/BLENDER SCRIPTING/Blender-Python-Tutorial/"
-bpy.context.scene.render.filepath = home_path + "screenshot.png"
+curr_dir = "C:/Users/Chiqu/Desktop/BLENDER SCRIPTING/Blender-Python-Tutorial/"
+
+bpy.context.scene.render.filepath = curr_dir + "screenshot.png"
 bpy.ops.render.render(write_still=True)
 
 
@@ -35,7 +36,7 @@ if camera:
 else:
     print("Camera non trovata.")
 
-bpy.context.scene.render.filepath = home_path + "screenshot_camera_render_changepose.png"
+bpy.context.scene.render.filepath = curr_dir + "screenshot_camera_render_changepose.png"
 bpy.ops.render.render(write_still=True)
 print(matrix_pose)
 
@@ -60,7 +61,7 @@ if camera:
 else:
     print("Camera non trovata.")
 
-bpy.context.scene.render.filepath = home_path + "screenshot_camera_rotation.png"
+bpy.context.scene.render.filepath = curr_dir + "screenshot_camera_rotation.png"
 bpy.ops.render.render(write_still=True)
 print(matrix_pose)
 
@@ -84,7 +85,7 @@ if camera:
 else:
     print("Camera non trovata.")
 
-bpy.context.scene.render.filepath = home_path + "screenshot_camera_rotation_rotate.png"
+bpy.context.scene.render.filepath = curr_dir + "screenshot_camera_rotation_rotate.png"
 bpy.ops.render.render(write_still=True)
 print(matrix_pose)
 

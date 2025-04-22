@@ -1,0 +1,1 @@
+WORKING_DIR = "C:/Users/Chiqu/Desktop/BLENDER SCRIPTING/Blender-Python-Tutorial/""
