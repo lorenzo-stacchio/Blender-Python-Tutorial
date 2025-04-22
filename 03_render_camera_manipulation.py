@@ -52,9 +52,7 @@ matrix_pose = copy.deepcopy(camera.matrix_world)
 
 if camera:
     camera.rotation_mode = 'XYZ'
-
     offset_radians_y = 10 ## dipende da posizionamento camera!
-
     # Ruotiamo la camera lungo l'asse Z 
     camera.rotation_euler.y -= math.radians(offset_radians_y)
     ## per settare in maniera assoluta basta assegnare!
@@ -68,3 +66,45 @@ print(matrix_pose)
 
 # reset camera to initial
 camera.matrix_world = matrix_pose
+
+
+
+## ROTATION FACILE CON METODO ROTATE
+## get initial matrix pose
+
+matrix_pose = copy.deepcopy(camera.matrix_world)
+
+if camera:
+    camera.rotation_mode = 'XYZ'
+    applied_rotation = Euler((0.0, -math.radians(10), 0.0), 'XYZ')
+    # Ruotiamo la camera lungo l'asse Z 
+    camera.rotation_euler.rotate(applied_rotation)
+    ## per settare in maniera assoluta basta assegnare!
+    
+else:
+    print("Camera non trovata.")
+
+bpy.context.scene.render.filepath = home_path + "screenshot_camera_rotation_rotate.png"
+bpy.ops.render.render(write_still=True)
+print(matrix_pose)
+
+# reset camera to initial
+camera.matrix_world = matrix_pose
+
+
+
+### METODO GENERALE
+
+
+def setupCamera(scene, c):
+    pi = math.pi
+
+    scene.camera.rotation_euler[0] = c[0] * (pi / 180.0)
+    scene.camera.rotation_euler[1] = c[1] * (pi / 180.0)
+    scene.camera.rotation_euler[2] = c[2] * (pi / 180.0)
+
+    scene.camera.location.x = c[3]
+    scene.camera.location.y = c[4]
+    scene.camera.location.z = c[5]
+
+    return
