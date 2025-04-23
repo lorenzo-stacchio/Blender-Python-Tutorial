@@ -15,9 +15,7 @@ else:
     print(f"Failed to download OBJ file. Status code: {response.status_code}")
 
 # Import the OBJ file
-
 cubemesh = bpy.data.objects.get("Cube")
-
 image_path = f'{home_dir}/downloaded_texture.png'
 
 # Crea un nuovo materiale

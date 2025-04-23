@@ -6,12 +6,6 @@ import random
 
 ## TODO: se crasha, eseguire dentro blender e funziona
 
-
-## Lista materiali prefab
-RedMaterial = "Material.Red"
-BlackMaterial = "Material.Black"
-
-
 def spawn_cube(name, location_x=0,location_y=0,location_z = 0, size = 3):
     cubemesh = bpy.ops.mesh.primitive_cube_add(size=size, scale = (1,1,1), enter_editmode = False, align = "WORLD", location=(location_x, location_y, location_z))
     cubemesh = bpy.context.active_object
@@ -48,8 +42,8 @@ print("-" * sep_len + "Creazione piano di cubi" + "-" * sep_len) ### ignore this
 
 # Aggiunta di un cubo
 
-n_cubes = 64
-width,height = 300, 150
+n_cubes = 200
+width,height = 600, 1200
 
 area = width*height
 area_cube = area//n_cubes

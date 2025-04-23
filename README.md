@@ -12,3 +12,7 @@ Extension can be found [here](https://marketplace.visualstudio.com/items?itemNam
 - 4 Select the Blender Scene you want to apply the script
 - 5 Return on VSCODE and again CTRL + SHIFT + P
 - 6 Select Blender: Run Script
+
+
+## Exercises 
+
