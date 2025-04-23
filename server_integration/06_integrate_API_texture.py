@@ -3,7 +3,7 @@ import requests
 
 server_url = "http://127.0.0.1:5000/download-texture"
 response = requests.get(server_url)
-home_dir = "C:/Users/Chiqu/Desktop/BLENDER SCRIPTING/Blender-Python-Tutorial/downloaded/"
+home_dir = "C:/Users/Chiqu/Desktop/BLENDER SCRIPTING/Blender-Python-Tutorial/server_integration/downloaded/"
 
 # Check if the request was successful
 if response.status_code == 200:
