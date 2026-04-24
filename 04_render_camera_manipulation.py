@@ -7,13 +7,10 @@ sep_len = 20
 print("-" * sep_len + "Render Image" + "-" * sep_len) ### ignore this, just for formatting prints
 
 ## SAVE IMAGE RENDER
-curr_dir = "C:/Users/Chiqu/Desktop/BLENDER SCRIPTING/Blender-Python-Tutorial/"
+curr_dir = "C:/Users/Chiqu/Desktop/CORSI/Computer Graphics/"
 
 bpy.context.scene.render.filepath = curr_dir + "screenshot.png"
 bpy.ops.render.render(write_still=True)
-
-
-
 
 ## RENDER CHANGING CAMERA POSE
 

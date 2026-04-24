@@ -5,7 +5,7 @@ print("-" * sep_len + "Creo Cubo" + "-" * sep_len) ### ignore this, just for for
 
 # Aggiunta di un cubo
 
-cubemesh = bpy.ops.mesh.primitive_cube_add(size=2, location=(0, 0, 0))
+cubemesh = bpy.ops.mesh.primitive_cube_add(size=2, location=(0, 5, 0))
 
 # bpy.ops.mesh.primitive_uv_sphere_add(location = (5,5,5))
 # bpy.ops.mesh.primitive_plane_add()

@@ -42,7 +42,7 @@ print("-" * sep_len + "Creazione piano di cubi" + "-" * sep_len) ### ignore this
 
 # Aggiunta di un cubo
 
-n_cubes = 200
+n_cubes = 30
 width,height = 600, 1200
 
 area = width*height
